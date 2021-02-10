@@ -47,7 +47,7 @@ pen.color("white")
 pen.penup()
 pen.hideturtle()
 pen.goto(0, 260)
-pen.write("Player A: 0\tPlayer B : 0", align = "center", font = ("Courier", 20, "normal"))
+pen.write("Player A : 0\tPlayer B : 0", align = "center", font = ("Courier", 20, "normal"))
 
 # Player control functions
 def paddleA_up():
@@ -104,7 +104,7 @@ while True:
         ball.dy *= -1
         scoreA += 1
         pen.clear()
-        pen.write("Player A: {}\tPlayer B : {}".format(scoreA, scoreB), align="center", font=("Courier", 20, "normal"))
+        pen.write("Player A : {}\tPlayer B : {}".format(scoreA, scoreB), align="center", font=("Courier", 20, "normal"))
 
     if ball.xcor() < -390:
         ball.goto(0, 0)
@@ -112,7 +112,7 @@ while True:
         ball.dy *= 1
         scoreB += 1
         pen.clear()
-        pen.write("Player A: {}\tPlayer B : {}".format(scoreA, scoreB), align="center", font=("Courier", 20, "normal"))
+        pen.write("Player A : {}\tPlayer B : {}".format(scoreA, scoreB), align="center", font=("Courier", 20, "normal"))
 
     if (ball.xcor() > 340 and ball.xcor() < 350) and (ball.ycor() < paddleB.ycor() + 40 and ball.ycor() > paddleB.ycor() - 40):
         ball.setx(340)
